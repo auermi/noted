@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class Note {
+    let dateCreated: NSDate
+    var dateUpdated: NSDate
+    var note: String
+    
+    init(note:String = "") {
+        self.dateCreated = NSDate()
+        self.dateUpdated = NSDate()
+        self.note = note
+    }
+}

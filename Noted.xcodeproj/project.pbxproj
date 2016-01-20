@@ -12,6 +12,8 @@
 		CA0D814E1C4EF049005E0D86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0D814C1C4EF049005E0D86 /* Main.storyboard */; };
 		CA0D81501C4EF049005E0D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0D814F1C4EF049005E0D86 /* Assets.xcassets */; };
 		CA0D81531C4EF049005E0D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0D81511C4EF049005E0D86 /* LaunchScreen.storyboard */; };
+		CA0D815B1C4F0556005E0D86 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D815A1C4F0556005E0D86 /* NoteModel.swift */; };
+		CA0D815D1C4F0F37005E0D86 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D815C1C4F0F37005E0D86 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		CA0D814F1C4EF049005E0D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA0D81521C4EF049005E0D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA0D81541C4EF049005E0D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA0D815A1C4F0556005E0D86 /* NoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteModel.swift; path = ../NoteModel.swift; sourceTree = "<group>"; };
+		CA0D815C1C4F0F37005E0D86 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		CA0D81471C4EF049005E0D86 /* Noted */ = {
 			isa = PBXGroup;
 			children = (
+				CA0D815A1C4F0556005E0D86 /* NoteModel.swift */,
+				CA0D815C1C4F0F37005E0D86 /* Note.swift */,
 				CA0D81481C4EF049005E0D86 /* AppDelegate.swift */,
 				CA0D814A1C4EF049005E0D86 /* ViewController.swift */,
 				CA0D814C1C4EF049005E0D86 /* Main.storyboard */,
@@ -136,7 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA0D814B1C4EF049005E0D86 /* ViewController.swift in Sources */,
+				CA0D815B1C4F0556005E0D86 /* NoteModel.swift in Sources */,
 				CA0D81491C4EF049005E0D86 /* AppDelegate.swift in Sources */,
+				CA0D815D1C4F0F37005E0D86 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +292,7 @@
 				CA0D81591C4EF049005E0D86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
