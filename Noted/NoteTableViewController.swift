@@ -10,8 +10,6 @@ import UIKit
 
 class NoteTableViewController: UITableViewController {
     
-    var notes: [Note] = [Note(note: "Welcome to Noted!"), Note(note: "I hope you enjoy the Noted app!"), Note(note: "Select a note to get started.")]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
