@@ -26,7 +26,7 @@ class NoteTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "edit") {
-            var destination = segue.destinationViewController as? EditViewController;
+            let destination = segue.destinationViewController as? EditViewController;
             let cell = sender as! UITableViewCell
             let selectedRow = tableView.indexPathForCell(cell)!.row
             destination!.selectedValue = notes[selectedRow]

@@ -10,12 +10,13 @@ import UIKit
 
 class EditViewController: UIViewController {
     
-    @IBOutlet weak var NoteTextView: UITextView!
+    @IBOutlet weak var noteTextField: UITextField!
+    
     var selectedValue: Note!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NoteTextView.text = selectedValue.note
+        noteTextField.text = selectedValue.note
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +25,9 @@ class EditViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveButton(sender: AnyObject) {
+        selectedValue.note = noteTextField.text!
+    }
 
     /*
     // MARK: - Navigation
