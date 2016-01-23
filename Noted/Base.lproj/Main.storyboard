@@ -40,7 +40,13 @@
                             <outlet property="delegate" destination="cK7-bk-A80" id="BcG-xM-DTc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Noted" id="J5M-oD-i1T"/>
+                    <navigationItem key="navigationItem" title="Noted" id="J5M-oD-i1T">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FXu-Pb-QM7">
+                            <connections>
+                                <segue destination="Zka-2U-kfM" kind="show" identifier="add" id="hav-ci-tYI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wN-wU-hi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,6 +108,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="hav-ci-tYI"/>
         <segue reference="Uba-PD-tMX"/>
     </inferredMetricsTieBreakers>
 </document>

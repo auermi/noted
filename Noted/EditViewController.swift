@@ -16,7 +16,7 @@ class EditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        noteTextField.text = selectedValue.note
+        noteTextField.text = selectedValue?.note
         // Do any additional setup after loading the view.
     }
 
@@ -26,7 +26,11 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func saveButton(sender: AnyObject) {
-        selectedValue.note = noteTextField.text!
+        if (selectedValue == nil) {
+            notes.append(Note(note: noteTextField.text!))
+        } else {
+            selectedValue?.note = noteTextField.text!
+        }
     }
 
     /*
