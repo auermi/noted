@@ -10,12 +10,13 @@ import UIKit
 
 class EditViewController: UIViewController {
     
-    @IBOutlet weak var noteTextField: UITextField!
+    @IBOutlet weak var noteTextField: UITextView!
     
     var selectedValue: Note!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.automaticallyAdjustsScrollViewInsets = false
         noteTextField.text = selectedValue?.note
     }
 

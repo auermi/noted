@@ -64,13 +64,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gII-ZY-FRt">
-                                <rect key="frame" x="20" y="72" width="331" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Izv-Wq-8tA">
+                                <rect key="frame" x="20" y="84" width="560" height="516"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Izv-Wq-8tA" secondAttribute="trailing" constant="20" id="T96-rl-8Kc"/>
+                            <constraint firstItem="8Vu-7M-U1h" firstAttribute="top" secondItem="Izv-Wq-8tA" secondAttribute="bottom" id="ZiG-Gn-WHL"/>
+                            <constraint firstItem="Izv-Wq-8tA" firstAttribute="top" secondItem="KjA-JK-IKI" secondAttribute="bottom" constant="20" id="Zig-hP-5iA"/>
+                            <constraint firstItem="Izv-Wq-8tA" firstAttribute="leading" secondItem="hnw-cm-6pr" secondAttribute="leading" constant="20" id="gKs-EH-Cmc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Noted" id="0bP-e5-RDx">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="oxV-ba-Yhr">
@@ -81,7 +88,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="noteTextField" destination="gII-ZY-FRt" id="2rT-ma-3Ua"/>
+                        <outlet property="noteTextField" destination="Izv-Wq-8tA" id="edp-BZ-vzh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgU-rN-ckT" userLabel="First Responder" sceneMemberID="firstResponder"/>
