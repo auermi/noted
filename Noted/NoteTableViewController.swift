@@ -19,12 +19,15 @@ class NoteTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        // Get the cell object
         let cell = tableView.dequeueReusableCellWithIdentifier("noteCell", forIndexPath: indexPath)
+        // Set the cells text label equal to our note text
         cell.textLabel?.text = notes[indexPath.row].note
         return cell
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Pass the note object of the selected row to the edit view controller
         if (segue.identifier == "edit") {
             let destination = segue.destinationViewController as? EditViewController;
             let cell = sender as! UITableViewCell

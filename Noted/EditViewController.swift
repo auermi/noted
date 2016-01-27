@@ -16,7 +16,9 @@ class EditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Get rid of that blank space at the top of the text view
         self.automaticallyAdjustsScrollViewInsets = false
+        // Set the value of the text field to the note that we clicked on in the table view
         noteTextField.text = selectedValue?.note
     }
 
@@ -24,14 +26,10 @@ class EditViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func saveNote(sender: AnyObject) {
-        selectedValue?.note = noteTextField.text!
-        
-    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "save") {
+            // If we have a note object update it, if not append a new one
             if (selectedValue == nil) {
                 notes.append(Note(note: noteTextField.text!))
             } else {
