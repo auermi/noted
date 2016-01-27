@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteCell" textLabel="5zV-hh-God" style="IBUITableViewCellStyleDefault" id="9zr-Vo-PfC">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9zr-Vo-PfC" id="OCC-JW-znq">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -52,7 +52,7 @@
             </objects>
             <point key="canvasLocation" x="1231" y="253"/>
         </scene>
-        <!--Edit View Controller-->
+        <!--Noted-->
         <scene sceneID="CNW-K2-vLf">
             <objects>
                 <viewController id="Zka-2U-kfM" customClass="EditViewController" customModule="Noted" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,24 +69,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmC-Jj-qAY">
-                                <rect key="frame" x="20" y="110" width="70" height="30"/>
-                                <state key="normal" title="Save Note"/>
-                                <connections>
-                                    <action selector="saveButton:" destination="Zka-2U-kfM" eventType="touchUpInside" id="V0Z-J9-MT8"/>
-                                    <segue destination="cK7-bk-A80" kind="show" id="Uba-PD-tMX"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Noted" id="0bP-e5-RDx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="oxV-ba-Yhr">
+                            <connections>
+                                <action selector="saveNote:" destination="Zka-2U-kfM" id="9Mk-ft-I6P"/>
+                                <segue destination="RGD-vf-ZZx" kind="show" identifier="save" id="5E3-HQ-PpV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="noteTextField" destination="gII-ZY-FRt" id="2rT-ma-3Ua"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgU-rN-ckT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913" y="253"/>
+            <point key="canvasLocation" x="1231" y="1029"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CQC-lc-WfY">
@@ -109,6 +109,5 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="hav-ci-tYI"/>
-        <segue reference="Uba-PD-tMX"/>
     </inferredMetricsTieBreakers>
 </document>

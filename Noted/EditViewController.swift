@@ -17,22 +17,29 @@ class EditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         noteTextField.text = selectedValue?.note
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    @IBAction func saveNote(sender: AnyObject) {
+        selectedValue?.note = noteTextField.text!
+        
+    }
     
-    @IBAction func saveButton(sender: AnyObject) {
-        if (selectedValue == nil) {
-            notes.append(Note(note: noteTextField.text!))
-        } else {
-            selectedValue?.note = noteTextField.text!
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "save") {
+            if (selectedValue == nil) {
+                notes.append(Note(note: noteTextField.text!))
+            } else {
+                selectedValue?.note = noteTextField.text!
+            }
         }
     }
 
+    
     /*
     // MARK: - Navigation
 
