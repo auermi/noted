@@ -47,6 +47,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="noteTable" destination="1nZ-mk-yNJ" id="Lt0-ua-Yup"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wN-wU-hi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

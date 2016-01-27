@@ -9,7 +9,10 @@
 import UIKit
 
 class NoteTableViewController: UITableViewController {
-
+    
+    // TODO: Might be temporary. Look into reloading tableview without needing this
+    @IBOutlet var noteTable: UITableView!
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -24,6 +27,19 @@ class NoteTableViewController: UITableViewController {
         // Set the cells text label equal to our note text
         cell.textLabel?.text = notes[indexPath.row].note
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            // Remove deleted note
+            notes.removeAtIndex(indexPath.row)
+            // Reload the table
+            noteTable.reloadData()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
