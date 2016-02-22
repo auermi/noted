@@ -8,6 +8,8 @@
 
 import UIKit
 
+var notes: [Note] = [Note(note: "Welcome to Noted!"), Note(note: "I hope you enjoy the Noted app!"), Note(note: "Select a note to get started.")]
+
 class NoteTableViewController: UITableViewController {
     
     // TODO: Might be temporary. Look into reloading tableview without needing this

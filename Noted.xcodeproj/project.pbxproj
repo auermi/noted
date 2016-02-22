@@ -13,7 +13,6 @@
 		CA0D81531C4EF049005E0D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0D81511C4EF049005E0D86 /* LaunchScreen.storyboard */; };
 		CA0D815D1C4F0F37005E0D86 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D815C1C4F0F37005E0D86 /* Note.swift */; };
 		CAB18CC51C534D630069E097 /* NoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB18CC41C534D630069E097 /* NoteTableViewController.swift */; };
-		CAB18CC81C5359D90069E097 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB18CC71C5359D90069E097 /* NoteModel.swift */; };
 		CAB18CCC1C53D1690069E097 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB18CCB1C53D1690069E097 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +25,6 @@
 		CA0D81541C4EF049005E0D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA0D815C1C4F0F37005E0D86 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		CAB18CC41C534D630069E097 /* NoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
-		CAB18CC71C5359D90069E097 /* NoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteModel.swift; path = ../NoteModel.swift; sourceTree = "<group>"; };
 		CAB18CCB1C53D1690069E097 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +58,6 @@
 		CA0D81471C4EF049005E0D86 /* Noted */ = {
 			isa = PBXGroup;
 			children = (
-				CAB18CC71C5359D90069E097 /* NoteModel.swift */,
 				CA0D815C1C4F0F37005E0D86 /* Note.swift */,
 				CA0D81481C4EF049005E0D86 /* AppDelegate.swift */,
 				CA0D814C1C4EF049005E0D86 /* Main.storyboard */,
@@ -146,7 +143,6 @@
 			files = (
 				CAB18CCC1C53D1690069E097 /* EditViewController.swift in Sources */,
 				CAB18CC51C534D630069E097 /* NoteTableViewController.swift in Sources */,
-				CAB18CC81C5359D90069E097 /* NoteModel.swift in Sources */,
 				CA0D81491C4EF049005E0D86 /* AppDelegate.swift in Sources */,
 				CA0D815D1C4F0F37005E0D86 /* Note.swift in Sources */,
 			);
