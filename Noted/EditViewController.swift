@@ -29,24 +29,13 @@ class EditViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "save") {
-            // If we have a note object update it, if not append a new one
+            // If we have a note object update it, if not create a new one
             if (selectedValue == nil) {
-                notes.append(Note(note: noteTextField.text!))
+                seedNote(noteTextField.text!)
             } else {
                 selectedValue?.note = noteTextField.text!
+                selectedValue?.update()
             }
         }
     }
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

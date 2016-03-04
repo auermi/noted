@@ -7,13 +7,22 @@
 //
 
 import UIKit
-
-var notes: [Note] = [Note(note: "Welcome to Noted!"), Note(note: "I hope you enjoy the Noted app!"), Note(note: "Select a note to get started.")]
+import CoreData
 
 class NoteTableViewController: UITableViewController {
     
     // TODO: Might be temporary. Look into reloading tableview without needing this
     @IBOutlet var noteTable: UITableView!
+    
+    var notes: [Note] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Get notes in storage
+        notes = fetchNotes()
+        
+    }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -38,6 +47,7 @@ class NoteTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             // Remove deleted note
+            notes[indexPath.row].delete()
             notes.removeAtIndex(indexPath.row)
             // Reload the table
             noteTable.reloadData()
@@ -55,3 +65,12 @@ class NoteTableViewController: UITableViewController {
     }
     
 }
+
+
+
+
+
+
+
+
+

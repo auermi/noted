@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA01B84B1C7A966C0007ACAC /* NoteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA01B8491C7A966C0007ACAC /* NoteModel.xcdatamodeld */; };
+		CA01B8571C7AA2420007ACAC /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01B8561C7AA2420007ACAC /* DataController.swift */; };
 		CA0D81491C4EF049005E0D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D81481C4EF049005E0D86 /* AppDelegate.swift */; };
 		CA0D814E1C4EF049005E0D86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0D814C1C4EF049005E0D86 /* Main.storyboard */; };
 		CA0D81501C4EF049005E0D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0D814F1C4EF049005E0D86 /* Assets.xcassets */; };
 		CA0D81531C4EF049005E0D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0D81511C4EF049005E0D86 /* LaunchScreen.storyboard */; };
-		CA0D815D1C4F0F37005E0D86 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D815C1C4F0F37005E0D86 /* Note.swift */; };
+		CA64843B1C7BDE6200455C96 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6484391C7BDE6200455C96 /* Note+CoreDataProperties.swift */; };
+		CA64843C1C7BDE6200455C96 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA64843A1C7BDE6200455C96 /* Note.swift */; };
 		CAB18CC51C534D630069E097 /* NoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB18CC41C534D630069E097 /* NoteTableViewController.swift */; };
 		CAB18CCC1C53D1690069E097 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB18CCB1C53D1690069E097 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA01B84A1C7A966C0007ACAC /* NoteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteModel.xcdatamodel; sourceTree = "<group>"; };
+		CA01B8561C7AA2420007ACAC /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		CA0D81451C4EF049005E0D86 /* Noted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0D81481C4EF049005E0D86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA0D814D1C4EF049005E0D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA0D814F1C4EF049005E0D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA0D81521C4EF049005E0D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA0D81541C4EF049005E0D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA0D815C1C4F0F37005E0D86 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		CA6484391C7BDE6200455C96 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CA64843A1C7BDE6200455C96 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		CAB18CC41C534D630069E097 /* NoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
 		CAB18CCB1C53D1690069E097 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,14 +64,17 @@
 		CA0D81471C4EF049005E0D86 /* Noted */ = {
 			isa = PBXGroup;
 			children = (
-				CA0D815C1C4F0F37005E0D86 /* Note.swift */,
+				CA6484391C7BDE6200455C96 /* Note+CoreDataProperties.swift */,
+				CA64843A1C7BDE6200455C96 /* Note.swift */,
 				CA0D81481C4EF049005E0D86 /* AppDelegate.swift */,
+				CA01B8561C7AA2420007ACAC /* DataController.swift */,
 				CA0D814C1C4EF049005E0D86 /* Main.storyboard */,
 				CAB18CCB1C53D1690069E097 /* EditViewController.swift */,
 				CAB18CC41C534D630069E097 /* NoteTableViewController.swift */,
 				CA0D814F1C4EF049005E0D86 /* Assets.xcassets */,
 				CA0D81511C4EF049005E0D86 /* LaunchScreen.storyboard */,
 				CA0D81541C4EF049005E0D86 /* Info.plist */,
+				CA01B8491C7A966C0007ACAC /* NoteModel.xcdatamodeld */,
 			);
 			path = Noted;
 			sourceTree = "<group>";
@@ -141,10 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA01B8571C7AA2420007ACAC /* DataController.swift in Sources */,
 				CAB18CCC1C53D1690069E097 /* EditViewController.swift in Sources */,
+				CA64843C1C7BDE6200455C96 /* Note.swift in Sources */,
+				CA01B84B1C7A966C0007ACAC /* NoteModel.xcdatamodeld in Sources */,
 				CAB18CC51C534D630069E097 /* NoteTableViewController.swift in Sources */,
 				CA0D81491C4EF049005E0D86 /* AppDelegate.swift in Sources */,
-				CA0D815D1C4F0F37005E0D86 /* Note.swift in Sources */,
+				CA64843B1C7BDE6200455C96 /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +307,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CA01B8491C7A966C0007ACAC /* NoteModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CA01B84A1C7A966C0007ACAC /* NoteModel.xcdatamodel */,
+			);
+			currentVersion = CA01B84A1C7A966C0007ACAC /* NoteModel.xcdatamodel */;
+			path = NoteModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CA0D813D1C4EF049005E0D86 /* Project object */;
 }
