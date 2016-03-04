@@ -46,11 +46,12 @@ class NoteTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            
             // Remove deleted note
             notes[indexPath.row].delete()
             notes.removeAtIndex(indexPath.row)
-            // Reload the table
-            noteTable.reloadData()
+            // Remove from table
+            noteTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
         }
     }
     
