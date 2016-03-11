@@ -13,10 +13,15 @@
 		CA0D814E1C4EF049005E0D86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0D814C1C4EF049005E0D86 /* Main.storyboard */; };
 		CA0D81501C4EF049005E0D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0D814F1C4EF049005E0D86 /* Assets.xcassets */; };
 		CA0D81531C4EF049005E0D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0D81511C4EF049005E0D86 /* LaunchScreen.storyboard */; };
+		CA32B5DC1C91F4AF008076E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA32B5DB1C91F4AF008076E0 /* LoginViewController.swift */; };
 		CA64843B1C7BDE6200455C96 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6484391C7BDE6200455C96 /* Note+CoreDataProperties.swift */; };
 		CA64843C1C7BDE6200455C96 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA64843A1C7BDE6200455C96 /* Note.swift */; };
 		CAB18CC51C534D630069E097 /* NoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB18CC41C534D630069E097 /* NoteTableViewController.swift */; };
 		CAB18CCC1C53D1690069E097 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB18CCB1C53D1690069E097 /* EditViewController.swift */; };
+		CAC873301C8A979900510FDA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC8732C1C8A979900510FDA /* Fabric.framework */; };
+		CAC873311C8A979900510FDA /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC8732D1C8A979900510FDA /* TwitterKit.framework */; };
+		CAC873321C8A979900510FDA /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CAC8732E1C8A979900510FDA /* TwitterKitResources.bundle */; };
+		CAC873331C8A979900510FDA /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC8732F1C8A979900510FDA /* TwitterCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +33,15 @@
 		CA0D814F1C4EF049005E0D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA0D81521C4EF049005E0D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA0D81541C4EF049005E0D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA32B5DB1C91F4AF008076E0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA6484391C7BDE6200455C96 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CA64843A1C7BDE6200455C96 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		CAB18CC41C534D630069E097 /* NoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
 		CAB18CCB1C53D1690069E097 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		CAC8732C1C8A979900510FDA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		CAC8732D1C8A979900510FDA /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		CAC8732E1C8A979900510FDA /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		CAC8732F1C8A979900510FDA /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC873301C8A979900510FDA /* Fabric.framework in Frameworks */,
+				CAC873331C8A979900510FDA /* TwitterCore.framework in Frameworks */,
+				CAC873311C8A979900510FDA /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +61,10 @@
 		CA0D813C1C4EF049005E0D86 = {
 			isa = PBXGroup;
 			children = (
+				CAC8732C1C8A979900510FDA /* Fabric.framework */,
+				CAC8732D1C8A979900510FDA /* TwitterKit.framework */,
+				CAC8732E1C8A979900510FDA /* TwitterKitResources.bundle */,
+				CAC8732F1C8A979900510FDA /* TwitterCore.framework */,
 				CA0D81471C4EF049005E0D86 /* Noted */,
 				CA0D81461C4EF049005E0D86 /* Products */,
 			);
@@ -69,6 +86,7 @@
 				CA0D81481C4EF049005E0D86 /* AppDelegate.swift */,
 				CA01B8561C7AA2420007ACAC /* DataController.swift */,
 				CA0D814C1C4EF049005E0D86 /* Main.storyboard */,
+				CA32B5DB1C91F4AF008076E0 /* LoginViewController.swift */,
 				CAB18CCB1C53D1690069E097 /* EditViewController.swift */,
 				CAB18CC41C534D630069E097 /* NoteTableViewController.swift */,
 				CA0D814F1C4EF049005E0D86 /* Assets.xcassets */,
@@ -89,6 +107,7 @@
 				CA0D81411C4EF049005E0D86 /* Sources */,
 				CA0D81421C4EF049005E0D86 /* Frameworks */,
 				CA0D81431C4EF049005E0D86 /* Resources */,
+				CAC8732B1C8A977200510FDA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -137,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC873321C8A979900510FDA /* TwitterKitResources.bundle in Resources */,
 				CA0D81531C4EF049005E0D86 /* LaunchScreen.storyboard in Resources */,
 				CA0D81501C4EF049005E0D86 /* Assets.xcassets in Resources */,
 				CA0D814E1C4EF049005E0D86 /* Main.storyboard in Resources */,
@@ -144,6 +164,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CAC8732B1C8A977200510FDA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 6c7530b77b077f1ebd39091c6af14778fdafba14 25f2bccb6f2ee2684cd65e0433a71b8419acaf251c24f52c61311f8177dc7eb3";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA0D81411C4EF049005E0D86 /* Sources */ = {
@@ -157,6 +193,7 @@
 				CAB18CC51C534D630069E097 /* NoteTableViewController.swift in Sources */,
 				CA0D81491C4EF049005E0D86 /* AppDelegate.swift in Sources */,
 				CA64843B1C7BDE6200455C96 /* Note+CoreDataProperties.swift in Sources */,
+				CA32B5DC1C91F4AF008076E0 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +304,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Noted/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.usonia.Noted;
@@ -278,6 +319,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Noted/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.usonia.Noted;

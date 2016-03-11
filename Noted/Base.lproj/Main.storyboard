@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RGD-vf-ZZx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rGY-Nj-cYe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -53,7 +53,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wN-wU-hi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1231" y="253"/>
+            <point key="canvasLocation" x="1527" y="21"/>
         </scene>
         <!--Noted-->
         <scene sceneID="CNW-K2-vLf">
@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgU-rN-ckT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1231" y="1029"/>
+            <point key="canvasLocation" x="1527" y="1001"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CQC-lc-WfY">
@@ -114,10 +114,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5J-9m-2aR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="419" y="253"/>
+            <point key="canvasLocation" x="-87" y="153"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="0pv-Gc-QGg">
+            <objects>
+                <viewController id="rGY-Nj-cYe" customClass="LoginViewController" customModule="Noted" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="av6-xW-Mf5"/>
+                        <viewControllerLayoutGuide type="bottom" id="7nz-6o-hrw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vIy-rS-0Eg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="RGD-vf-ZZx" kind="show" identifier="start" id="2Nk-uz-2ee"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VO1-c6-Lig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87" y="-734"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="2Nk-uz-2ee"/>
         <segue reference="hav-ci-tYI"/>
     </inferredMetricsTieBreakers>
 </document>
