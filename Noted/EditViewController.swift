@@ -13,6 +13,7 @@ class EditViewController: UIViewController {
     @IBOutlet weak var noteTextField: UITextView!
     
     var selectedValue: Note!
+    let dataInterface = DataInterface()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +32,12 @@ class EditViewController: UIViewController {
         if (segue.identifier == "save") {
             // If we have a note object update it, if not create a new one
             if (selectedValue == nil) {
-                seedNote(noteTextField.text!)
+                dataInterface.create("Note", properties: [
+                    "note": noteTextField.text!
+                ])
             } else {
                 selectedValue?.note = noteTextField.text!
-                selectedValue?.update()
+                dataInterface.update(selectedValue)
             }
         }
     }

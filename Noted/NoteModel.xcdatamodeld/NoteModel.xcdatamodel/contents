@@ -3,7 +3,11 @@
     <entity name="Note" representedClassName=".Note" syncable="YES">
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Note" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="User" positionX="-288" positionY="-4" width="135" height="58"/>
+        <element name="Note" positionX="-279" positionY="18" width="128" height="60"/>
     </elements>
 </model>

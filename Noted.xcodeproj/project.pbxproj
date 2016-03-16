@@ -14,8 +14,11 @@
 		CA0D81501C4EF049005E0D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0D814F1C4EF049005E0D86 /* Assets.xcassets */; };
 		CA0D81531C4EF049005E0D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0D81511C4EF049005E0D86 /* LaunchScreen.storyboard */; };
 		CA32B5DC1C91F4AF008076E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA32B5DB1C91F4AF008076E0 /* LoginViewController.swift */; };
-		CA64843B1C7BDE6200455C96 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6484391C7BDE6200455C96 /* Note+CoreDataProperties.swift */; };
-		CA64843C1C7BDE6200455C96 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA64843A1C7BDE6200455C96 /* Note.swift */; };
+		CA6CEA691C9658BE00A910CB /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CEA671C9658BE00A910CB /* User+CoreDataProperties.swift */; };
+		CA6CEA6A1C9658BE00A910CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CEA681C9658BE00A910CB /* User.swift */; };
+		CA6CEA6D1C9900D500A910CB /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CEA6B1C9900D500A910CB /* Note+CoreDataProperties.swift */; };
+		CA6CEA6E1C9900D500A910CB /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CEA6C1C9900D500A910CB /* Note.swift */; };
+		CA6CEA701C99030A00A910CB /* DataInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CEA6F1C99030A00A910CB /* DataInterface.swift */; };
 		CAB18CC51C534D630069E097 /* NoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB18CC41C534D630069E097 /* NoteTableViewController.swift */; };
 		CAB18CCC1C53D1690069E097 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB18CCB1C53D1690069E097 /* EditViewController.swift */; };
 		CAC873301C8A979900510FDA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC8732C1C8A979900510FDA /* Fabric.framework */; };
@@ -34,8 +37,11 @@
 		CA0D81521C4EF049005E0D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA0D81541C4EF049005E0D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA32B5DB1C91F4AF008076E0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		CA6484391C7BDE6200455C96 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CA64843A1C7BDE6200455C96 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		CA6CEA671C9658BE00A910CB /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "../User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CA6CEA681C9658BE00A910CB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
+		CA6CEA6B1C9900D500A910CB /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CA6CEA6C1C9900D500A910CB /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		CA6CEA6F1C99030A00A910CB /* DataInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataInterface.swift; sourceTree = "<group>"; };
 		CAB18CC41C534D630069E097 /* NoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
 		CAB18CCB1C53D1690069E097 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		CAC8732C1C8A979900510FDA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -81,8 +87,10 @@
 		CA0D81471C4EF049005E0D86 /* Noted */ = {
 			isa = PBXGroup;
 			children = (
-				CA6484391C7BDE6200455C96 /* Note+CoreDataProperties.swift */,
-				CA64843A1C7BDE6200455C96 /* Note.swift */,
+				CA6CEA6B1C9900D500A910CB /* Note+CoreDataProperties.swift */,
+				CA6CEA6C1C9900D500A910CB /* Note.swift */,
+				CA6CEA671C9658BE00A910CB /* User+CoreDataProperties.swift */,
+				CA6CEA681C9658BE00A910CB /* User.swift */,
 				CA0D81481C4EF049005E0D86 /* AppDelegate.swift */,
 				CA01B8561C7AA2420007ACAC /* DataController.swift */,
 				CA0D814C1C4EF049005E0D86 /* Main.storyboard */,
@@ -93,6 +101,7 @@
 				CA0D81511C4EF049005E0D86 /* LaunchScreen.storyboard */,
 				CA0D81541C4EF049005E0D86 /* Info.plist */,
 				CA01B8491C7A966C0007ACAC /* NoteModel.xcdatamodeld */,
+				CA6CEA6F1C99030A00A910CB /* DataInterface.swift */,
 			);
 			path = Noted;
 			sourceTree = "<group>";
@@ -188,12 +197,15 @@
 			files = (
 				CA01B8571C7AA2420007ACAC /* DataController.swift in Sources */,
 				CAB18CCC1C53D1690069E097 /* EditViewController.swift in Sources */,
-				CA64843C1C7BDE6200455C96 /* Note.swift in Sources */,
+				CA6CEA691C9658BE00A910CB /* User+CoreDataProperties.swift in Sources */,
 				CA01B84B1C7A966C0007ACAC /* NoteModel.xcdatamodeld in Sources */,
+				CA6CEA6A1C9658BE00A910CB /* User.swift in Sources */,
+				CA6CEA6E1C9900D500A910CB /* Note.swift in Sources */,
 				CAB18CC51C534D630069E097 /* NoteTableViewController.swift in Sources */,
 				CA0D81491C4EF049005E0D86 /* AppDelegate.swift in Sources */,
-				CA64843B1C7BDE6200455C96 /* Note+CoreDataProperties.swift in Sources */,
 				CA32B5DC1C91F4AF008076E0 /* LoginViewController.swift in Sources */,
+				CA6CEA701C99030A00A910CB /* DataInterface.swift in Sources */,
+				CA6CEA6D1C9900D500A910CB /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

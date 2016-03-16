@@ -7,20 +7,20 @@
 //
 
 import UIKit
-import CoreData
 
 class NoteTableViewController: UITableViewController {
     
     // TODO: Might be temporary. Look into reloading tableview without needing this
     @IBOutlet var noteTable: UITableView!
     
+    var dataInterface = DataInterface()
     var notes: [Note] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Get notes in storage
-        notes = fetchNotes()
+        notes = dataInterface.get("Note") as! [Note]
         
     }
     
@@ -48,7 +48,7 @@ class NoteTableViewController: UITableViewController {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             
             // Remove deleted note
-            notes[indexPath.row].delete()
+            dataInterface.delete(notes[indexPath.row])
             notes.removeAtIndex(indexPath.row)
             // Remove from table
             noteTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)

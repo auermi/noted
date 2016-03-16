@@ -1,8 +1,8 @@
 //
-//  Note+CoreDataProperties.swift
+//  User+CoreDataProperties.swift
 //  Noted
 //
-//  Created by Michael Andrew Auer on 3/15/16.
+//  Created by Michael Andrew Auer on 3/13/16.
 //  Copyright © 2016 Usonia LLC. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,8 +12,8 @@
 import Foundation
 import CoreData
 
-extension Note {
+extension User {
 
-    @NSManaged var note: String?
+    @NSManaged var id: String?
 
 }

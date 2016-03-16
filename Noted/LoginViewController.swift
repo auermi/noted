@@ -13,18 +13,20 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let logInButton = TWTRLogInButton { (session, error) in
             if let unwrappedSession = session {
-                let alert = UIAlertController(title: "Logged In",
-                    message: "User \(unwrappedSession.userName) has logged in",
-                    preferredStyle: UIAlertControllerStyle.Alert
-                )
                 // Get id and create user if none exists from id
-                print(unwrappedSession.userID)
+                
+                let dataInterface = DataInterface()
+                
+                dataInterface.create("User", properties: [
+                    "id": unwrappedSession.userID
+                ])
+                
+//                let test = ((dataInterface.get("User") as! [User]).first?.id)! as String
                 // Transition to notes table view screen
                 self.performSegueWithIdentifier("start", sender: nil)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
             } else {
                 NSLog("Login error: %@", error!.localizedDescription);
             }
