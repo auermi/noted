@@ -38,6 +38,7 @@ class NoteTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("noteCell", forIndexPath: indexPath)
         // Set the cells text label equal to our note text
         cell.textLabel?.text = notes[indexPath.row].note
+        cell.detailTextLabel?.text = DateTime().fmtDate(notes[indexPath.row].dateUpdated!)
         return cell
     }
     

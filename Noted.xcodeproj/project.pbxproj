@@ -14,6 +14,7 @@
 		CA0D81501C4EF049005E0D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0D814F1C4EF049005E0D86 /* Assets.xcassets */; };
 		CA0D81531C4EF049005E0D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0D81511C4EF049005E0D86 /* LaunchScreen.storyboard */; };
 		CA32B5DC1C91F4AF008076E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA32B5DB1C91F4AF008076E0 /* LoginViewController.swift */; };
+		CA4996251C9D2F4700C68912 /* DateTimeManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4996241C9D2F4700C68912 /* DateTimeManipulation.swift */; };
 		CA6CEA691C9658BE00A910CB /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CEA671C9658BE00A910CB /* User+CoreDataProperties.swift */; };
 		CA6CEA6A1C9658BE00A910CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CEA681C9658BE00A910CB /* User.swift */; };
 		CA6CEA6D1C9900D500A910CB /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CEA6B1C9900D500A910CB /* Note+CoreDataProperties.swift */; };
@@ -37,6 +38,7 @@
 		CA0D81521C4EF049005E0D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA0D81541C4EF049005E0D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA32B5DB1C91F4AF008076E0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CA4996241C9D2F4700C68912 /* DateTimeManipulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeManipulation.swift; sourceTree = "<group>"; };
 		CA6CEA671C9658BE00A910CB /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CA6CEA681C9658BE00A910CB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CA6CEA6B1C9900D500A910CB /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				CA0D81541C4EF049005E0D86 /* Info.plist */,
 				CA01B8491C7A966C0007ACAC /* NoteModel.xcdatamodeld */,
 				CA6CEA6F1C99030A00A910CB /* DataInterface.swift */,
+				CA4996241C9D2F4700C68912 /* DateTimeManipulation.swift */,
 			);
 			path = Noted;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				CA32B5DC1C91F4AF008076E0 /* LoginViewController.swift in Sources */,
 				CA6CEA701C99030A00A910CB /* DataInterface.swift in Sources */,
 				CA6CEA6D1C9900D500A910CB /* Note+CoreDataProperties.swift in Sources */,
+				CA4996251C9D2F4700C68912 /* DateTimeManipulation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
