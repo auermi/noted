@@ -22,9 +22,14 @@ class EditViewController: UIViewController {
         super.viewDidLoad()
         // Get rid of that blank space at the top of the text view
         self.automaticallyAdjustsScrollViewInsets = false
-        // Set the value of the text field to the note that we clicked on in the table view
-        noteTextField.text = selectedValue?.note
         
+        if (selectedValue != nil) {
+            // Set the value of the text field to the note that we clicked on in the table view
+            noteTextField.text = selectedValue?.note
+            self.navigationController?.topViewController!.title = "Edit Note"
+        } else {
+            self.navigationController?.topViewController!.title = "New Note"
+        }
         // Hide the back button
         self.navigationItem.setHidesBackButton(true, animated: false)
     }
