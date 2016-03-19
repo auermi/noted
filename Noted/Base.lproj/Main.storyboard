@@ -83,6 +83,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Noted" id="0bP-e5-RDx">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="KdT-Xb-c67">
+                            <connections>
+                                <segue destination="Dgb-77-cFu" kind="unwind" unwindAction="unWindOnCancel:" id="kpb-iI-jrE"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="oxV-ba-Yhr">
                             <connections>
                                 <action selector="saveNote:" destination="Zka-2U-kfM" id="9Mk-ft-I6P"/>
@@ -95,6 +100,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgU-rN-ckT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Dgb-77-cFu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1527" y="1001"/>
         </scene>
@@ -139,7 +145,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Nk-uz-2ee"/>
+        <segue reference="5E3-HQ-PpV"/>
         <segue reference="hav-ci-tYI"/>
     </inferredMetricsTieBreakers>
 </document>

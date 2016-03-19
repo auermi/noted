@@ -12,6 +12,7 @@ class NoteTableViewController: UITableViewController {
     
     // TODO: Might be temporary. Look into reloading tableview without needing this
     @IBOutlet var noteTable: UITableView!
+    @IBAction func unWindOnCancel(unwindSegue: UIStoryboardSegue) {}
     
     var dataInterface = DataInterface()
     var notes: [Note] = []
