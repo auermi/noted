@@ -21,10 +21,7 @@ struct DateTime {
         }
         
         let noteNSD: NSDate = df.dateFromString(noteDate)!
-        print(noteDate)
-        print(noteNSD)
         let difference = -(noteNSD.timeIntervalSinceNow)
-        print("the difference is \(difference)")
         let oneday: Double = 86400
         
         if (difference < oneday) {
