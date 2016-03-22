@@ -43,17 +43,13 @@ class EditViewController: UIViewController {
         if (segue.identifier == "save") {
             // If we have a note object update it, if not create a new one
             if (selectedValue == nil) {
-                let df = NSDateFormatter()
-                df.dateFormat = "yyyy-MM-dd HH:mm:ss"
                 dataInterface.create("Note", properties: [
                     "note": noteTextField.text!,
-                    "dateUpdated": df.stringFromDate(NSDate())
+                    "dateUpdated": DateTime().setDate()
                 ])
             } else {
                 selectedValue?.note = noteTextField.text!
-                let df = NSDateFormatter()
-                df.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                selectedValue?.dateUpdated = df.stringFromDate(NSDate())
+                selectedValue?.dateUpdated = DateTime().setDate()
                 dataInterface.update(selectedValue)
             }
         }
