@@ -29,8 +29,9 @@ struct DateTime {
         } else if (difference < (oneday * 2)) {
             return "Yesterday"
         } else {
-            df.dateFormat = "mm/dd/yy"
-            return df.stringFromDate(df.dateFromString(noteDate)!)
+            let noteDateObject = df.dateFromString(noteDate)
+            df.dateFormat = "MM/dd/yy"
+            return df.stringFromDate(noteDateObject!)
         }
     }
     func setDate() -> String {
