@@ -11,12 +11,10 @@ import UIKit
 class EditViewController: UIViewController {
     
     @IBOutlet weak var noteTextField: UITextView!
+    @IBOutlet weak var noteTitleField: UITextField!
     
     var selectedValue: Note!
     let dataInterface = DataInterface()
-    
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +23,7 @@ class EditViewController: UIViewController {
         
         if (selectedValue != nil) {
             // Set the value of the text field to the note that we clicked on in the table view
+            noteTitleField.text = selectedValue?.noteTitle
             noteTextField.text = selectedValue?.note
             self.navigationController?.topViewController!.title = "Edit Note"
         } else {
@@ -45,10 +44,12 @@ class EditViewController: UIViewController {
             if (selectedValue == nil) {
                 dataInterface.create("Note", properties: [
                     "note": noteTextField.text!,
+                    "noteTitle": noteTitleField.text!,
                     "dateUpdated": DateTime().setDate()
                 ])
             } else {
                 selectedValue?.note = noteTextField.text!
+                selectedValue?.noteTitle = noteTitleField.text!
                 selectedValue?.dateUpdated = DateTime().setDate()
                 dataInterface.update(selectedValue)
             }

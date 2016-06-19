@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RGD-vf-ZZx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RGD-vf-ZZx">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Noted-->
@@ -76,19 +77,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Izv-Wq-8tA">
-                                <rect key="frame" x="20" y="84" width="560" height="516"/>
+                                <rect key="frame" x="20" y="110" width="560" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y3Q-hV-Otv">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Izv-Wq-8tA" secondAttribute="trailing" constant="20" id="T96-rl-8Kc"/>
                             <constraint firstItem="8Vu-7M-U1h" firstAttribute="top" secondItem="Izv-Wq-8tA" secondAttribute="bottom" id="ZiG-Gn-WHL"/>
-                            <constraint firstItem="Izv-Wq-8tA" firstAttribute="top" secondItem="KjA-JK-IKI" secondAttribute="bottom" constant="20" id="Zig-hP-5iA"/>
+                            <constraint firstItem="Izv-Wq-8tA" firstAttribute="top" secondItem="KjA-JK-IKI" secondAttribute="bottom" constant="46" id="Zig-hP-5iA"/>
                             <constraint firstItem="Izv-Wq-8tA" firstAttribute="leading" secondItem="hnw-cm-6pr" secondAttribute="leading" constant="20" id="gKs-EH-Cmc"/>
+                            <constraint firstItem="Y3Q-hV-Otv" firstAttribute="leading" secondItem="hnw-cm-6pr" secondAttribute="leadingMargin" id="hYl-FJ-3lJ"/>
+                            <constraint firstItem="Y3Q-hV-Otv" firstAttribute="trailing" secondItem="hnw-cm-6pr" secondAttribute="trailingMargin" id="knx-fB-D98"/>
+                            <constraint firstItem="Y3Q-hV-Otv" firstAttribute="top" secondItem="KjA-JK-IKI" secondAttribute="bottom" constant="8" symbolic="YES" id="whY-lj-SP2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Noted" id="0bP-e5-RDx">
@@ -106,6 +118,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="noteTextField" destination="Izv-Wq-8tA" id="edp-BZ-vzh"/>
+                        <outlet property="noteTitleField" destination="Y3Q-hV-Otv" id="4mn-p8-SyE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgU-rN-ckT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -158,8 +171,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5E3-HQ-PpV"/>
         <segue reference="hav-ci-tYI"/>
+        <segue reference="5E3-HQ-PpV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

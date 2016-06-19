@@ -15,6 +15,7 @@ import CoreData
 extension Note {
 
     @NSManaged var note: String?
+    @NSManaged var noteTitle: String?
     @NSManaged var dateUpdated: String?
 
 }

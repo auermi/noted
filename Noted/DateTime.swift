@@ -24,6 +24,8 @@ struct DateTime {
         let difference = -(noteNSD.timeIntervalSinceNow)
         let oneday: Double = 86400
         
+        // Today does not mean in the last 24 hours
+        
         if (difference < oneday) {
             return "Today"
         } else if (difference < (oneday * 2)) {
