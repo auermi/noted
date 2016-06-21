@@ -14,6 +14,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="gZP-nv-rcz" userLabel="footer">
+                            <rect key="frame" x="0.0" y="156" width="600" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteCell" textLabel="5zV-hh-God" detailTextLabel="s3q-QL-c93" rowHeight="64" style="IBUITableViewCellStyleValue1" id="9zr-Vo-PfC">
                                 <rect key="frame" x="0.0" y="92" width="600" height="64"/>
@@ -171,8 +176,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="2Nk-uz-2ee"/>
         <segue reference="hav-ci-tYI"/>
-        <segue reference="5E3-HQ-PpV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

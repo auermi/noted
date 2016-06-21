@@ -14,8 +14,10 @@ class NoteTableViewController: UITableViewController {
     @IBOutlet var noteTable: UITableView!
     @IBAction func unWindOnCancel(unwindSegue: UIStoryboardSegue) {}
     
+    
     var dataInterface = DataInterface()
     var notes: [Note] = []
+    let label = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,19 @@ class NoteTableViewController: UITableViewController {
         // Get notes in storage
         notes = dataInterface.get("Note") as! [Note]
         
+        // Create empty state message but dont add to view
+        
+        label.frame = CGRectMake(50, 50, 200, 30)
+        label.textAlignment = NSTextAlignment.Center
+        label.center = self.view.center
+        label.text = "Add a new note!"
+        
+    }
+    override func viewWillAppear(animated: Bool) {
+        // If there are no notes, show empty state message
+        if (notes.count == 0) {
+            self.view.addSubview(label)
+        }
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -54,10 +69,18 @@ class NoteTableViewController: UITableViewController {
             notes.removeAtIndex(indexPath.row)
             // Remove from table
             noteTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
+            
+            // If there are no notes, show empty state message
+            if (notes.count == 0) {
+                self.view.addSubview(label)
+            }
         }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Leaving view so remove message if it exists
+        label.removeFromSuperview()
+        
         // Pass the note object of the selected row to the edit view controller
         if (segue.identifier == "edit") {
             let destination = segue.destinationViewController as? EditViewController;
@@ -66,14 +89,4 @@ class NoteTableViewController: UITableViewController {
             destination!.selectedValue = notes[selectedRow]
         }
     }
-    
 }
-
-
-
-
-
-
-
-
-
