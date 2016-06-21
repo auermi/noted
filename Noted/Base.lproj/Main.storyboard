@@ -55,6 +55,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Noted" id="J5M-oD-i1T">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="hJI-qk-Ed6">
+                            <connections>
+                                <segue destination="gqA-69-zyN" kind="show" identifier="settings" id="2b7-jS-GIQ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FXu-Pb-QM7">
                             <connections>
                                 <segue destination="Zka-2U-kfM" kind="show" identifier="add" id="hav-ci-tYI"/>
@@ -68,6 +73,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wN-wU-hi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1527" y="21"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="to5-Ne-dNC">
+            <objects>
+                <viewController title="Settings" id="gqA-69-zyN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YRu-m3-Tqc"/>
+                        <viewControllerLayoutGuide type="bottom" id="YW2-aY-Lii"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZiB-at-iKd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="voR-qW-ad4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2361" y="21"/>
         </scene>
         <!--Noted-->
         <scene sceneID="CNW-K2-vLf">
@@ -177,7 +200,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2Nk-uz-2ee"/>
-        <segue reference="hav-ci-tYI"/>
+        <segue reference="ghF-I2-Wpq"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
