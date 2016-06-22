@@ -4,12 +4,13 @@
         <attribute name="dateUpdated" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="noteTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName=".User" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Note" positionX="-279" positionY="18" width="128" height="90"/>
+        <element name="Note" positionX="-279" positionY="18" width="128" height="105"/>
         <element name="User" positionX="-288" positionY="-4" width="135" height="58"/>
     </elements>
 </model>

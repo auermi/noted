@@ -16,6 +16,8 @@ class EditViewController: UIViewController {
     var selectedValue: Note!
     let dataInterface = DataInterface()
     
+    var user: [User] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Get rid of that blank space at the top of the text view
@@ -31,6 +33,7 @@ class EditViewController: UIViewController {
         }
         // Hide the back button
         self.navigationItem.setHidesBackButton(true, animated: false)
+        user = dataInterface.get("User") as! [User]
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,7 +48,8 @@ class EditViewController: UIViewController {
                 dataInterface.create("Note", properties: [
                     "note": noteTextField.text!,
                     "noteTitle": noteTitleField.text!,
-                    "dateUpdated": DateTime().setDate()
+                    "dateUpdated": DateTime().setDate(),
+                    "userID": (user.first?.id)!
                 ])
             } else {
                 selectedValue?.note = noteTextField.text!

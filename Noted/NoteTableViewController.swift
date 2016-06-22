@@ -15,7 +15,7 @@ class NoteTableViewController: UITableViewController {
     @IBAction func unWindOnCancel(unwindSegue: UIStoryboardSegue) {}
     
     
-    var dataInterface = DataInterface()
+    let dataInterface = DataInterface()
     var notes: [Note] = []
     let label = UILabel()
     
