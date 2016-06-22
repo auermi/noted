@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="1527" y="21"/>
         </scene>
-        <!--I-->
+        <!--Settings-->
         <scene sceneID="to5-Ne-dNC">
             <objects>
-                <viewController title="I" id="gqA-69-zyN" sceneMemberID="viewController">
+                <viewController title="Settings" id="gqA-69-zyN" customClass="SettingsViewController" customModule="Noted" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YRu-m3-Tqc"/>
                         <viewControllerLayoutGuide type="bottom" id="YW2-aY-Lii"/>
@@ -85,12 +85,43 @@
                     <view key="view" contentMode="scaleToFill" id="ZiB-at-iKd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signed in as @auermi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cP-uJ-CWr">
+                                <rect key="frame" x="28" y="72" width="544" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfT-1o-zkd">
+                                <rect key="frame" x="265" y="110" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="iMH-is-604"/>
+                                </constraints>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signoutButton:" destination="gqA-69-zyN" eventType="touchUpInside" id="2L4-M8-myS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2cP-uJ-CWr" firstAttribute="centerX" secondItem="ZiB-at-iKd" secondAttribute="centerX" id="0WU-R0-JDk"/>
+                            <constraint firstItem="zfT-1o-zkd" firstAttribute="top" secondItem="2cP-uJ-CWr" secondAttribute="bottom" constant="17.5" id="50R-qW-ODB"/>
+                            <constraint firstItem="2cP-uJ-CWr" firstAttribute="leading" secondItem="ZiB-at-iKd" secondAttribute="leadingMargin" constant="8" id="9mb-QN-gC2"/>
+                            <constraint firstItem="zfT-1o-zkd" firstAttribute="centerX" secondItem="2cP-uJ-CWr" secondAttribute="centerX" id="Aqh-Td-PxJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2cP-uJ-CWr" secondAttribute="trailing" constant="8" id="B6h-i1-RFy"/>
+                            <constraint firstItem="2cP-uJ-CWr" firstAttribute="top" secondItem="YRu-m3-Tqc" secondAttribute="bottom" constant="8" id="Cpd-Sv-IKl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="rGY-Nj-cYe" kind="show" identifier="signout" id="tU0-AU-UBb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="voR-qW-ad4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2361" y="21"/>
+            <point key="canvasLocation" x="2415" y="11"/>
         </scene>
         <!--Noted-->
         <scene sceneID="CNW-K2-vLf">
@@ -199,7 +230,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Nk-uz-2ee"/>
+        <segue reference="5E3-HQ-PpV"/>
         <segue reference="ghF-I2-Wpq"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

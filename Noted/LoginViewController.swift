@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBarHidden = true
+        
         let dataInterface = DataInterface()
         
         // If a user already exists skip authentication
@@ -45,15 +47,17 @@ class LoginViewController: UIViewController {
                     }
                 }
             }
-            
             logInButton.center = self.view.center
             self.view.addSubview(logInButton)
         }
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }

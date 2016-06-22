@@ -26,6 +26,7 @@
 		CAC873321C8A979900510FDA /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CAC8732E1C8A979900510FDA /* TwitterKitResources.bundle */; };
 		CAC873331C8A979900510FDA /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC8732F1C8A979900510FDA /* TwitterCore.framework */; };
 		CADE15831D19FD7700728135 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CADE15821D19FD7700728135 /* Launch Screen.storyboard */; };
+		CADE15851D1A341B00728135 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADE15841D1A341B00728135 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		CAC8732E1C8A979900510FDA /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		CAC8732F1C8A979900510FDA /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		CADE15821D19FD7700728135 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Noted/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CADE15841D1A341B00728135 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				CA0D81481C4EF049005E0D86 /* AppDelegate.swift */,
 				CA01B8561C7AA2420007ACAC /* DataController.swift */,
 				CA0D814C1C4EF049005E0D86 /* Main.storyboard */,
+				CADE15841D1A341B00728135 /* SettingsViewController.swift */,
 				CA32B5DB1C91F4AF008076E0 /* LoginViewController.swift */,
 				CAB18CCB1C53D1690069E097 /* EditViewController.swift */,
 				CAB18CC41C534D630069E097 /* NoteTableViewController.swift */,
@@ -208,6 +211,7 @@
 				CA0D81491C4EF049005E0D86 /* AppDelegate.swift in Sources */,
 				CA32B5DC1C91F4AF008076E0 /* LoginViewController.swift in Sources */,
 				CA6CEA701C99030A00A910CB /* DataInterface.swift in Sources */,
+				CADE15851D1A341B00728135 /* SettingsViewController.swift in Sources */,
 				CA6CEA6D1C9900D500A910CB /* Note+CoreDataProperties.swift in Sources */,
 				CA4996251C9D2F4700C68912 /* DateTime.swift in Sources */,
 			);
