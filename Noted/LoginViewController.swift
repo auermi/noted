@@ -20,17 +20,20 @@ class LoginViewController: UIViewController {
         
         // If a user already exists skip authentication
         let user = dataInterface.get("User") as! [User]
+       
         if (user.count == 1) {
-            DispatchQueue.main.async {
+            DispatchQueue.main.async() {
                 self.performSegue(withIdentifier: "start", sender: nil)
             }
         } else {
+        
             let logInButton = TWTRLogInButton { (session, error) in
                 if let unwrappedSession = session {
                     // Get id and create user
                     dataInterface.create("User", properties: [
                         "id": unwrappedSession.userID as NSObject
                     ])
+//                    print(session?.userName ?? nil ?? "asdf");
                     // Transition to notes table view screen
                     self.performSegue(withIdentifier: "start", sender: nil)
                 } else {

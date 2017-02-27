@@ -11,6 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     
+    @IBOutlet weak var signoutText: UILabel!
     @IBAction func signoutButton(_ sender: AnyObject) {
         let alert = UIAlertController(title: "Log Out Confirmation", message: "Are you sure you want to log out?", preferredStyle: UIAlertControllerStyle.alert)
         let alertActionConfirm = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (UIAlertAction) in
@@ -41,6 +42,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        signoutText.text = "Signed in as" + "";
     }
 
     override func didReceiveMemoryWarning() {
