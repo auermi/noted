@@ -11,9 +11,9 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     
-    @IBAction func signoutButton(sender: AnyObject) {
-        let alert = UIAlertController(title: "Log Out Confirmation", message: "Are you sure you want to log out?", preferredStyle: UIAlertControllerStyle.Alert)
-        let alertActionConfirm = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (UIAlertAction) in
+    @IBAction func signoutButton(_ sender: AnyObject) {
+        let alert = UIAlertController(title: "Log Out Confirmation", message: "Are you sure you want to log out?", preferredStyle: UIAlertControllerStyle.alert)
+        let alertActionConfirm = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (UIAlertAction) in
             // Hitting okay begins the logout process
             let dataInterface = DataInterface()
             // Delete Notes
@@ -25,15 +25,15 @@ class SettingsViewController: UIViewController {
             let user: [User] = dataInterface.get("User") as! [User]
             dataInterface.delete(user.first!)
             // Move Back to Login Page
-            self.performSegueWithIdentifier("signout", sender: nil)
+            self.performSegue(withIdentifier: "signout", sender: nil)
         }
-        let alertActionCancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel)
+        let alertActionCancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel)
         {
             (UIAlertAction) -> Void in
         }
         alert.addAction(alertActionConfirm)
         alert.addAction(alertActionCancel)
-        self.presentViewController(alert, animated: true)
+        self.present(alert, animated: true)
         {
             () -> Void in
         }

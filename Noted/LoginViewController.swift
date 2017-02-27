@@ -14,15 +14,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = true
         
         let dataInterface = DataInterface()
         
         // If a user already exists skip authentication
         let user = dataInterface.get("User") as! [User]
         if (user.count == 1) {
-            dispatch_async(dispatch_get_main_queue()) {
-                self.performSegueWithIdentifier("start", sender: nil)
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "start", sender: nil)
             }
         } else {
             let logInButton = TWTRLogInButton { (session, error) in
@@ -32,16 +32,16 @@ class LoginViewController: UIViewController {
                         "id": unwrappedSession.userID
                     ])
                     // Transition to notes table view screen
-                    self.performSegueWithIdentifier("start", sender: nil)
+                    self.performSegue(withIdentifier: "start", sender: nil)
                 } else {
                     NSLog("Login error: %@", error!.localizedDescription);
-                    let alert = UIAlertController(title: "Authentication Error", message: "There was an error logging into Twitter. Please try again", preferredStyle: UIAlertControllerStyle.Alert)
-                    let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default)
+                    let alert = UIAlertController(title: "Authentication Error", message: "There was an error logging into Twitter. Please try again", preferredStyle: UIAlertControllerStyle.alert)
+                    let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
                     {
                         (UIAlertAction) -> Void in
                     }
                     alert.addAction(alertAction)
-                    self.presentViewController(alert, animated: true)
+                    self.present(alert, animated: true)
                     {
                         () -> Void in
                     }
@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
 

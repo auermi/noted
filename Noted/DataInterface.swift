@@ -13,14 +13,14 @@ struct DataInterface {
     
     let moc = DataController().managedObjectContext
     
-    func create(eName: String, properties: [String: NSObject]) {
+    func create(_ eName: String, properties: [String: NSObject]) {
         // Set up our entity by selecting the entity and context we're targeting
         var entity: NSManagedObject
         
         if (eName == "User") {
-            entity = NSEntityDescription.insertNewObjectForEntityForName(eName, inManagedObjectContext: moc) as! User
+            entity = NSEntityDescription.insertNewObject(forEntityName: eName, into: moc) as! User
         } else if (eName == "Note") {
-            entity = NSEntityDescription.insertNewObjectForEntityForName(eName, inManagedObjectContext: moc) as! Note
+            entity = NSEntityDescription.insertNewObject(forEntityName: eName, into: moc) as! Note
         } else {
             fatalError("Can't create valid type: \(eName)")
         }
@@ -38,25 +38,25 @@ struct DataInterface {
             fatalError("Failure to save context: \(error)")
         }
     }
-    func get(eName: String) -> NSObject {
-        let req = NSFetchRequest(entityName: eName)
+    func get(_ eName: String) -> NSObject {
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: eName)
         
         do {
-            return try moc.executeFetchRequest(req)
+            return try moc.fetch(req)
             
         } catch {
             fatalError("Failed to fetch \(eName): \(error)")
         }
     }
-    func update(object: NSManagedObject) {
+    func update(_ object: NSManagedObject) {
         do {
             try object.managedObjectContext?.save()
         } catch {
             fatalError("Failed to save \(object): \(error)")
         }
     }
-    func delete(object: NSObject) {
-        moc.deleteObject(object as! NSManagedObject)
+    func delete(_ object: NSObject) {
+        moc.delete(object as! NSManagedObject)
         do {
             try moc.save()
         } catch {

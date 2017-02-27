@@ -41,7 +41,7 @@ class EditViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "save") {
             // If we have a note object update it, if not create a new one
             if (selectedValue == nil) {

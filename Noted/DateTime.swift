@@ -10,17 +10,17 @@ import Foundation
 
 struct DateTime {
     
-    let df: NSDateFormatter = NSDateFormatter()
+    let df: DateFormatter = DateFormatter()
     
     init() {
         df.dateFormat = "yyyy-MM-dd HH:mm:ss"
     }
-    func fmtDate(noteDate: String) -> String {
+    func fmtDate(_ noteDate: String) -> String {
         if (noteDate == "") {
             return ""
         }
         
-        let noteNSD: NSDate = df.dateFromString(noteDate)!
+        let noteNSD: Date = df.date(from: noteDate)!
         let difference = -(noteNSD.timeIntervalSinceNow)
         let oneday: Double = 86400
         
@@ -31,13 +31,13 @@ struct DateTime {
         } else if (difference < (oneday * 2)) {
             return "Yesterday"
         } else {
-            let noteDateObject = df.dateFromString(noteDate)
+            let noteDateObject = df.date(from: noteDate)
             df.dateFormat = "MM/dd/yy"
-            return df.stringFromDate(noteDateObject!)
+            return df.string(from: noteDateObject!)
         }
     }
     func setDate() -> String {
         df.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        return df.stringFromDate(NSDate())
+        return df.string(from: Date())
     }
 }
