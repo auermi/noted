@@ -46,10 +46,10 @@ class EditViewController: UIViewController {
             // If we have a note object update it, if not create a new one
             if (selectedValue == nil) {
                 dataInterface.create("Note", properties: [
-                    "note": noteTextField.text!,
-                    "noteTitle": noteTitleField.text!,
-                    "dateUpdated": DateTime().setDate(),
-                    "userID": (user.first?.id)!
+                    "note": noteTextField.text! as NSObject,
+                    "noteTitle": noteTitleField.text! as NSObject,
+                    "dateUpdated": DateTime().setDate() as NSObject,
+                    "userID": (user.first?.id)! as NSObject
                 ])
             } else {
                 selectedValue?.note = noteTextField.text!

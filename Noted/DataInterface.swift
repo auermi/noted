@@ -38,11 +38,10 @@ struct DataInterface {
             fatalError("Failure to save context: \(error)")
         }
     }
-    func get(_ eName: String) -> NSObject {
-        let req = NSFetchRequest<NSFetchRequestResult>(entityName: eName)
-        
+    func get(_ eName: String) -> NSArray {
+        let req = NSFetchRequest<NSManagedObject>(entityName: eName)
         do {
-            return try moc.fetch(req)
+            return try moc.fetch(req) as NSArray
             
         } catch {
             fatalError("Failed to fetch \(eName): \(error)")

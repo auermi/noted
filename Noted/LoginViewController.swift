@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
                 if let unwrappedSession = session {
                     // Get id and create user
                     dataInterface.create("User", properties: [
-                        "id": unwrappedSession.userID
+                        "id": unwrappedSession.userID as NSObject
                     ])
                     // Transition to notes table view screen
                     self.performSegue(withIdentifier: "start", sender: nil)
