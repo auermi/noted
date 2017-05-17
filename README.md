@@ -1,10 +1,18 @@
 # noted
-A note taking app for iOS
+A note taking app for iOS.
+
+## Features
+
+* Uses Twitter Fabric for authentication
+* Uses CoreData to store notes and a user object on the device
+* Read, write, update notes
+* Logging out of the app clears all notes from memory
+
 
 # License 
 The MIT License (MIT)
 
-Copyright (c) 2016 Michael Auer
+Copyright (c) 2017 Michael Auer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
