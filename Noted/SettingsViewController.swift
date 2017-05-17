@@ -13,7 +13,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var signoutText: UILabel!
     @IBAction func signoutButton(_ sender: AnyObject) {
-        let alert = UIAlertController(title: "Log Out Confirmation", message: "Are you sure you want to log out?", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Are you sure you want to log out?", message: "All of your notes will be deleted.", preferredStyle: UIAlertControllerStyle.alert)
         let alertActionConfirm = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (UIAlertAction) in
             // Hitting okay begins the logout process
             let dataInterface = DataInterface()
@@ -42,7 +42,9 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        signoutText.text = "Signed in as" + "";
+        let dataInterface = DataInterface();
+        let user: [User] = dataInterface.get("User") as! [User];
+        signoutText.text = "Signed in as \(user.first!.userName!)";
     }
 
     override func didReceiveMemoryWarning() {
